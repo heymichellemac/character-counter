@@ -1,0 +1,14 @@
+{
+  "name": "character-counter",
+  "version": "1.0.0",
+  "description": "",
+  "dependencies": {
+    "tailwindcss": "^3.0.23"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "build": "tailwindcss -i ./src/style.css -o ./public/style.css"
+  },
+  "author": "",
+  "license": "ISC"
+}
