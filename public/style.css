@@ -852,16 +852,6 @@ Ensure the default browser behavior of the `hidden` attribute.
   color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
-.dark .dark\:text-emerald-100 {
-  --tw-text-opacity: 1;
-  color: rgb(209 250 229 / var(--tw-text-opacity));
-}
-
-.dark .dark\:text-indigo-100 {
-  --tw-text-opacity: 1;
-  color: rgb(224 231 255 / var(--tw-text-opacity));
-}
-
 .dark .dark\:text-indigo-400 {
   --tw-text-opacity: 1;
   color: rgb(129 140 248 / var(--tw-text-opacity));
@@ -890,6 +880,11 @@ Ensure the default browser behavior of the `hidden` attribute.
 @media (min-width: 768px) {
   .md\:flex {
     display: flex;
+  }
+
+  .md\:text-4xl {
+    font-size: 2.25rem;
+    line-height: 2.5rem;
   }
 }
 
