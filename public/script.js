@@ -1,3 +1,4 @@
+
 const countTextArea = document.getElementById('character-text');
 const countCharacterVlaue = document.getElementById('character-count');
 const copyToClipboard = document.getElementById('copy-button');
@@ -5,7 +6,12 @@ const copyToClipboard2 = document.getElementById('copy-button2');
 const generateCharacters = document.getElementById('generate-characters');
 const charactersToGenerate = document.getElementById('characters-to-generate');
 const generatedCharacters = document.getElementById('generated-characters');
+const resetFields = document.getElementById('reset-button');
 
+resetFields.onclick = () => {
+  countTextArea.value = '';
+  generatedCharacters.value = '';
+}
 
 countTextArea.oninput = () => {
   let characters = countTextArea.value;
