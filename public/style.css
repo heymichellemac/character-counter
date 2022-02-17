@@ -556,6 +556,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   display: flex;
 }
 
+.hidden {
+  display: none;
+}
+
 .h-screen {
   height: 100vh;
 }
@@ -771,5 +775,15 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .hover\:underline-offset-2:hover {
   text-underline-offset: 2px;
+}
+
+@media (min-width: 1024px) {
+  .lg\:flex {
+    display: flex;
+  }
+
+  .lg\:flex-col {
+    flex-direction: column;
+  }
 }
 
