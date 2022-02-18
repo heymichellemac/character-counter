@@ -13,8 +13,11 @@ const copyToClipboard3 = document.getElementById('copy-button3');
 
 resetFields.onclick = () => {
   countTextArea.value = '';
+  countCharacterVlaue.innerHTML = '0';
   generatedCharacters.innerHTML = '';
   ipsumResult.innerHTML = '';
+  charactersToGenerate.value = '50';
+  length.value = '50';
 }
 
 countTextArea.oninput = () => {
@@ -23,9 +26,9 @@ countTextArea.oninput = () => {
 }
 
 copyToClipboard.onclick = () => {
-     /* Select the text field */
-   countTextArea.select();
-   countTextArea.setSelectionRange(0, 99999); /* For mobile devices */
+  //    /* Select the text field */
+  //  countTextArea.select();
+  //  countTextArea.setSelectionRange(0, 99999); /* For mobile devices */
  
     /* Copy the text inside the text field */
    navigator.clipboard.writeText(countTextArea.value);
@@ -36,8 +39,8 @@ copyToClipboard.onclick = () => {
 
 copyToClipboard2.onclick = () => {
   /* Select the text field */
-  generatedCharacters.select();
-  generatedCharacters.setSelectionRange(0, 99999); /* For mobile devices */
+  // generatedCharacters.select();
+  // generatedCharacters.setSelectionRange(0, 99999); /* For mobile devices */
 
   /* Copy the text inside the text field */
   navigator.clipboard.writeText(generatedCharacters.value);
@@ -48,8 +51,8 @@ copyToClipboard2.onclick = () => {
 
 copyToClipboard3.onclick = () => {
   /* Select the text field */
-  generatedCharacters.select();
-  generatedCharacters.setSelectionRange(0, 99999); /* For mobile devices */
+  // generatedCharacters.select();
+  // generatedCharacters.setSelectionRange(0, 99999); /* For mobile devices */
 
   /* Copy the text inside the text field */
   navigator.clipboard.writeText(ipsumResult.value);
