@@ -1,7 +1,5 @@
 const countTextArea = document.getElementById('character-text');
 const countCharacterVlaue = document.getElementById('character-count');
-const copyToClipboard = document.getElementById('copy-button');
-const copyToClipboard2 = document.getElementById('copy-button2');
 const generateCharacters = document.getElementById('generate-characters');
 const charactersToGenerate = document.getElementById('characters-to-generate');
 const generatedCharacters = document.getElementById('generated-characters');
@@ -9,7 +7,10 @@ const resetFields = document.getElementById('reset-button');
 const generate = document.getElementById('generate-ipsum');
 const length = document.getElementById('words-to-generate');
 const ipsumResult = document.getElementById('generated-ipsum');
-const copyToClipboard3 = document.getElementById('copy-button3');
+
+const copyCharacterCounter = document.getElementById('copy-button');
+const copyCharacterGenerator = document.getElementById('copy-button2');
+const copyLoremIpsum = document.getElementById('copy-button3');
 
 resetFields.onclick = () => {
   countTextArea.value = '';
@@ -25,38 +26,23 @@ countTextArea.oninput = () => {
   countCharacterVlaue.textContent = characters.length;
 }
 
-copyToClipboard.onclick = () => {
-  //    /* Select the text field */
-  //  countTextArea.select();
-  //  countTextArea.setSelectionRange(0, 99999); /* For mobile devices */
- 
+copyCharacterCounter.onclick = () => {
     /* Copy the text inside the text field */
    navigator.clipboard.writeText(countTextArea.value);
- 
    /* Alert the copied text */
    alert("Text copied successfully");
 }
 
-copyToClipboard2.onclick = () => {
-  /* Select the text field */
-  // generatedCharacters.select();
-  // generatedCharacters.setSelectionRange(0, 99999); /* For mobile devices */
-
+copyCharacterGenerator.onclick = () => {
   /* Copy the text inside the text field */
   navigator.clipboard.writeText(generatedCharacters.value);
-
   /* Alert the copied text */
   alert("Text copied successfully");
 }
 
-copyToClipboard3.onclick = () => {
-  /* Select the text field */
-  // generatedCharacters.select();
-  // generatedCharacters.setSelectionRange(0, 99999); /* For mobile devices */
-
+copyLoremIpsum.onclick = () => {
   /* Copy the text inside the text field */
   navigator.clipboard.writeText(ipsumResult.value);
-
   /* Alert the copied text */
   alert("Text copied successfully");
 }
