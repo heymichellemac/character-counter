@@ -94,17 +94,24 @@
 
       <div class="flex flex-col flex-1 p-8 overflow-y-auto bg-slate-100 dark:bg-slate-800 dark:text-white">
 
-        <section class="container mx-auto flex justify-end max-w-3xl pb-4">
-          <button id="reset-button" class="bg-emerald-100 dark:bg-emerald-500 px-3 py-3 rounded-md text-emerald-700 dark:text-white hover:bg-emerald-200 dark:hover:bg-emerald-600 transition-all duration-150 ease-in-out" >
-            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />
-            </svg>
-          </button>
-        </section>
+        <!-- <section class="relative container mx-auto flex justify-end max-w-3xl pb-4">
+          <div class="group">
+            <button id="reset-button" class="bg-emerald-100 dark:bg-emerald-500 px-3 py-3 rounded-md text-emerald-700 dark:text-white hover:bg-emerald-200 dark:hover:bg-emerald-600 transition-all duration-150 ease-in-out" >
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />
+              </svg>
+            </button>
+
+            <div class="invisible group-hover:visible absolute z-10 space-y-1 bg-gray-900 text-gray-50 text-sm rounded px-4 py-2 max-w-xs shadow-md" role="tooltip" aria-hidden="true" style="top:5px; right:60px;">
+              Reset
+            </div>
+          </div>
+          
+        </section> -->
 
         <!-- Character Counter Section -->
         <section id="character-counter" class="container mx-auto flex flex-col py-12 border-b-2 border-slate-200 dark:border-slate-600 max-w-3xl">
-            <h1 class="text-3xl md:text-4xl font-semibold mb-2 flex items-center">
+            <h1 class="text-2xl md:text-3xl font-semibold mb-2 flex items-center">
               <svg
                     xmlns="http://www.w3.org/2000/svg"
                     class="h-8 w-8 mr-2"
@@ -120,21 +127,30 @@
                     />
                     </svg>
                     Character Counter</h1>
-            <div class="flex justify-between items-center mb-2">
+            <div class="relative flex justify-between items-center mb-2">
               <p class="text-xl mt-4 mb-4">
                 Characters:
                 <span id="character-count" class="bg-slate-200 dark:bg-slate-700 p-2 ml-2 rounded-md">
                   0
                 </span>
               </p>
-              <button id="copy-button" class="bg-indigo-100 dark:bg-indigo-500 px-3 py-3 rounded-md text-indigo-700 dark:text-white hover:bg-indigo-200 dark:hover:bg-indigo-600 transition-all duration-150 ease-in-out" >
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6"
-                  fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path stroke-linecap="round" stroke-linejoin="round"
-                    stroke-width="2" d="M8 5H6a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2v-1M8 5a2 2 0 002 2h2a2 2 0 002-2M8 5a2 2 0 012-2h2a2 2 0 012 2m0 0h2a2 2 0 012 2v3m2 4H10m0 0l3-3m-3 3l3 3"
-                  />
-                </svg>
-              </button>
+
+              <div class="group">
+                <button id="copy-button" class="bg-indigo-100 dark:bg-indigo-500 px-3 py-3 rounded-md text-indigo-700 dark:text-white hover:bg-indigo-200 dark:hover:bg-indigo-600 transition-all duration-150 ease-in-out" 
+                >
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6"
+                    fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                      stroke-width="2" d="M8 5H6a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2v-1M8 5a2 2 0 002 2h2a2 2 0 002-2M8 5a2 2 0 012-2h2a2 2 0 012 2m0 0h2a2 2 0 012 2v3m2 4H10m0 0l3-3m-3 3l3 3"
+                    />
+                  </svg>
+                </button>
+
+                <div class="invisible group-hover:visible absolute z-10 space-y-1 bg-gray-900 text-gray-50 text-sm rounded px-4 py-2 max-w-xs shadow-md" role="tooltip" aria-hidden="true" style="top:-40px; right:-8px;">
+                  Copy
+                </div>
+              </div>
+
             </div>
     
             <textarea
@@ -148,7 +164,7 @@
 
         <!-- Character Generator Section -->
         <section id="character-generator" class="container mx-auto flex flex-col py-12 max-w-3xl border-b-2 border-slate-200 dark:border-slate-600 ">
-            <h1 class="text-3xl md:text-4xl font-semibold mb-2 flex items-center">
+            <h1 class="text-2xl md:text-3xl font-semibold mb-2 flex items-center">
               <svg
               xmlns="http://www.w3.org/2000/svg"
               class="h-8 w-8 mr-2"
@@ -165,17 +181,28 @@
               </svg>
               Character Generator
             </h1>
-            <div class="flex flex-wrap justify-between items-center mb-2">
-              <div class="block md:flex items-center text-xl mt-4 mb-4">
+            <div class="relative flex flex-wrap justify-between items-center mb-2">
+              <div class="block sm:flex items-center text-xl mt-4 mb-4">
                 <div>Characters:</div> 
                 <input maxlength="5" id="characters-to-generate" class="bg-white dark:bg-slate-700 border-2 border-slate-200 dark:border-slate-600 p-2 mx-2 w-24 rounded-md" value="50" /> 
-                <button id="generate-characters" class="px-3 py-2 rounded-md  border-2 transition-all duration-150 ease-in-out ml-1 mr-2 bg-indigo-100 dark:bg-indigo-500 text-indigo-700 dark:text-white hover:border-indigo-200 hover:bg-indigo-200 dark:hover:bg-indigo-600 dark:border-indigo-500 dark:hover:border-indigo-600">Generate</button>
+                <button id="generate-characters" class="px-4 py-2 rounded-md  border-2 transition-all duration-150 ease-in-out ml-1 mr-2 bg-indigo-100 dark:bg-indigo-500 text-indigo-700 dark:text-white hover:border-indigo-200 hover:bg-indigo-200 dark:hover:bg-indigo-600 dark:border-indigo-500 dark:hover:border-indigo-600">Generate</button>
               </div>
                 
-              <button id="copy-button2" class="bg-indigo-100 dark:bg-indigo-500 px-3 py-3 rounded-md text-indigo-700 dark:text-white hover:bg-indigo-200 dark:hover:bg-indigo-600 transition-all duration-150 ease-in-out">
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 5H6a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2v-1M8 5a2 2 0 002 2h2a2 2 0 002-2M8 5a2 2 0 012-2h2a2 2 0 012 2m0 0h2a2 2 0 012 2v3m2 4H10m0 0l3-3m-3 3l3 3" />
-                </svg></button>
+              <div class="group">
+                <button id="copy-button2" class="bg-indigo-100 dark:bg-indigo-500 px-3 py-3 rounded-md text-indigo-700 dark:text-white hover:bg-indigo-200 dark:hover:bg-indigo-600 transition-all duration-150 ease-in-out" 
+                >
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6"
+                    fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                      stroke-width="2" d="M8 5H6a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2v-1M8 5a2 2 0 002 2h2a2 2 0 002-2M8 5a2 2 0 012-2h2a2 2 0 012 2m0 0h2a2 2 0 012 2v3m2 4H10m0 0l3-3m-3 3l3 3"
+                    />
+                  </svg>
+                </button>
+
+                <div class="invisible group-hover:visible absolute z-10 space-y-1 bg-gray-900 text-gray-50 text-sm rounded px-4 py-2 max-w-xs shadow-md" role="tooltip" aria-hidden="true" style="top:-30px; right:-8px;">
+                  Copy
+                </div>
+              </div>
             </div>
             
             <textarea id="generated-characters" class="border-2 border-slate-200 dark:border-slate-600 dark:bg-slate-700 rounded-md form-control block px-3 py-1.5 transition ease-in-out" rows="6" maxlength="99999" placeholder="Generated text will appear here"></textarea>
@@ -183,22 +210,33 @@
 
         <!-- Lorem Ipsum Generator Section -->
         <section id="ipsum-generator" class="container mx-auto flex flex-col py-12 max-w-3xl">
-          <h1 class="text-3xl md:text-4xl font-semibold mb-2 flex items-center">
+          <h1 class="text-2xl md:text-3xl font-semibold mb-2 flex items-center">
             <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z" />
             </svg>
             Lorem Ipsum Generator</h1>
-          <div class="flex flex-wrap justify-between items-center mb-2">
-            <div class="block md:flex items-center text-xl mt-4 mb-4">
+          <div class="relative flex flex-wrap justify-between items-center mb-2">
+            <div class="block sm:flex items-center text-xl mt-4 mb-4">
               <div>Words:</div> 
               <input maxlength="3" id="words-to-generate" class="bg-white dark:bg-slate-700 border-2 border-slate-200 dark:border-slate-600 p-2 mx-2 w-24 rounded-md" value="50" /> 
-              <button id="generate-ipsum" class="px-3 py-2 rounded-md  border-2 transition-all duration-150 ease-in-out ml-1 mr-2 bg-indigo-100 dark:bg-indigo-500 text-indigo-700 hover:border-indigo-200 dark:text-white hover:bg-indigo-200 dark:hover:bg-indigo-600 dark:border-indigo-500 dark:hover:border-indigo-600">Generate</button>
+              <button id="generate-ipsum" class="px-4 py-2 rounded-md  border-2 transition-all duration-150 ease-in-out ml-1 mr-2 bg-indigo-100 dark:bg-indigo-500 text-indigo-700 hover:border-indigo-200 dark:text-white hover:bg-indigo-200 dark:hover:bg-indigo-600 dark:border-indigo-500 dark:hover:border-indigo-600">Generate</button>
             </div>
               
-            <button id="copy-button3" class="bg-indigo-100 dark:bg-indigo-500 px-3 py-3 rounded-md text-indigo-700 dark:text-white hover:bg-indigo-200 dark:hover:bg-indigo-600 transition-all duration-150 ease-in-out">
-              <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 5H6a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2v-1M8 5a2 2 0 002 2h2a2 2 0 002-2M8 5a2 2 0 012-2h2a2 2 0 012 2m0 0h2a2 2 0 012 2v3m2 4H10m0 0l3-3m-3 3l3 3" />
-              </svg></button>
+            <div class="group">
+              <button id="copy-button3" class="bg-indigo-100 dark:bg-indigo-500 px-3 py-3 rounded-md text-indigo-700 dark:text-white hover:bg-indigo-200 dark:hover:bg-indigo-600 transition-all duration-150 ease-in-out" 
+              >
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6"
+                  fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round"
+                    stroke-width="2" d="M8 5H6a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2v-1M8 5a2 2 0 002 2h2a2 2 0 002-2M8 5a2 2 0 012-2h2a2 2 0 012 2m0 0h2a2 2 0 012 2v3m2 4H10m0 0l3-3m-3 3l3 3"
+                  />
+                </svg>
+              </button>
+
+              <div class="invisible group-hover:visible absolute z-10 space-y-1 bg-gray-900 text-gray-50 text-sm rounded px-4 py-2 max-w-xs shadow-md" role="tooltip" aria-hidden="true" style="top:-30px; right:-8px;">
+                Copy
+              </div>
+            </div>
           </div>
           
           <textarea id="generated-ipsum" class="border-2 border-slate-200 dark:border-slate-600 dark:bg-slate-700 rounded-md form-control block px-3 py-1.5 transition ease-in-out" rows="6" maxlength="99999" placeholder="Generated text will appear here"></textarea>
@@ -208,9 +246,9 @@
           <p class="">
               Built by
               <a class="text-indigo-700 dark:text-indigo-400 dark:hover:text-indigo-500 hover:text-indigo-900 hover:underline hover:underline-offset-2 hover:decoration-2 transition-all duration-150 ease-in-out"
-              href="https://twitter.com/MishaCreatrix"
+              href="heymichellemac.com"
               target="_blank" rel="noopener noreferrer"
-              >Mishacreatrix</a>
+              >heymichellemac</a>
               
           </p>
           </section>
