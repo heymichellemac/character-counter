@@ -3,7 +3,7 @@ const countCharacterVlaue = document.getElementById('character-count');
 const generateCharacters = document.getElementById('generate-characters');
 const charactersToGenerate = document.getElementById('characters-to-generate');
 const generatedCharacters = document.getElementById('generated-characters');
-const resetFields = document.getElementById('reset-button');
+// const resetFields = document.getElementById('reset-button');
 const generate = document.getElementById('generate-ipsum');
 const length = document.getElementById('words-to-generate');
 const ipsumResult = document.getElementById('generated-ipsum');
@@ -12,14 +12,14 @@ const copyCharacterCounter = document.getElementById('copy-button');
 const copyCharacterGenerator = document.getElementById('copy-button2');
 const copyLoremIpsum = document.getElementById('copy-button3');
 
-resetFields.onclick = () => {
-  countTextArea.value = '';
-  countCharacterVlaue.innerHTML = '0';
-  generatedCharacters.innerHTML = '';
-  ipsumResult.innerHTML = '';
-  charactersToGenerate.value = '50';
-  length.value = '50';
-}
+// resetFields.onclick = () => {
+//   countTextArea.value = '';
+//   countCharacterVlaue.innerHTML = '0';
+//   generatedCharacters.innerHTML = '';
+//   ipsumResult.innerHTML = '';
+//   charactersToGenerate.value = '50';
+//   length.value = '50';
+// }
 
 countTextArea.oninput = () => {
   let characters = countTextArea.value;
@@ -27,24 +27,27 @@ countTextArea.oninput = () => {
 }
 
 copyCharacterCounter.onclick = () => {
+  countTextArea.select();
     /* Copy the text inside the text field */
    navigator.clipboard.writeText(countTextArea.value);
    /* Alert the copied text */
-   alert("Text copied successfully");
+  //  alert("Text copied successfully " + countTextArea.value);
 }
 
 copyCharacterGenerator.onclick = () => {
+  generatedCharacters.select();
   /* Copy the text inside the text field */
   navigator.clipboard.writeText(generatedCharacters.value);
   /* Alert the copied text */
-  alert("Text copied successfully");
+  // alert("Text copied successfully " + generatedCharacters.value);
 }
 
 copyLoremIpsum.onclick = () => {
+  ipsumResult.select();
   /* Copy the text inside the text field */
   navigator.clipboard.writeText(ipsumResult.value);
   /* Alert the copied text */
-  alert("Text copied successfully");
+  // alert("Text copied successfully " + ipsumResult.value );
 }
 
 generateCharacters.onclick = () => {
